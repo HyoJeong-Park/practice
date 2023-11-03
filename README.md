@@ -1,2 +1,2 @@
 # practice
-## practice anything i have not tried before
+ practice anything I have not tried before
