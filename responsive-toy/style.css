@@ -1,5 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 5px 5px rgb(85, 146, 211, 0.2);
+}
+
+.headerLogo {
+  display: inline;
+  color: #1F538A;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(min-width: 768px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .headerLogo {
+    font-size: 40px;
+  }
+
+  .headerMenu {
+    font-size: 30px;
+    width: 400px;
+  }
+
+  /* section */
+  section {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .headerMenu {
+    font-size: 20px;
+    width: 200px;
+  }
 }
