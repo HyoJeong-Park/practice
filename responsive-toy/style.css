@@ -5,10 +5,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Jua', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 li {
   list-style: none;
+}
+
+.color_blue {
+  color: #007BFF;
 }
 
 
@@ -16,7 +31,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 5px 5px 5px rgb(85, 146, 211, 0.2);
+  box-shadow: 0 5px 10px 2px rgb(85, 146, 211, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .headerLogo {
@@ -28,6 +50,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.headerMenu > li:hover{
+  cursor: pointer;
+}
+
+section {
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  position: relative;
 }
 
 @media(min-width: 768px) {
@@ -46,10 +78,111 @@ header {
 
   /* section */
   section {
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    /* position: relative; */
+  }
+
+  .home {
+    background-color: #93BCE8;
+  }
+  .homeImage {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+  }
+
+  .homeTitle {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform:translateY(-50%);
+    font-size: 60px;
+  }
+
+  .preview {
+    padding-top: 100px;
+  }
+
+  .previewContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .previewContent {
+    background-color: #93BCE8;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+  }
+
+  .previewTitle {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+  }
+
+  .try {
+    background-color: #93BCE8; 
+  }
+
+  .trytitleWrapper {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+  }
+  
+  .tryTitle {
+    font-size: 50px;
+  }
+
+  .tryButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .tryButton {
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 20px;
+    background-color: #5592D3;
+    color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .tryButton:hover {
+    background-color: #1F538A;
+  }
+
+  .tryContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 200px;
+  }
+
+  .tryContent {
+    background-color: #fff;
+    width: 350px;
+    height: 220px;
+    border-radius: 10px;
   }
 }
 
+/* 모바일 */
 @media (min-width: 320px) and (max-width: 768px) {
   header {
     padding: 0 20px;
