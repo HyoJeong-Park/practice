@@ -2,6 +2,13 @@ const moveHome = document.querySelector('.moveHome');
 const movePreview = document.querySelector('.movePreview');
 const moveTry = document.querySelector('.moveTry');
 
+// 리사이즈 시 0.3초 후 리로드
+window.addEventListener('resize', () => {
+  setTimeout(() => {
+    document.location.reload();
+  }, 300)
+})
+
 // 메뉴 탭 이동
 if(window.innerWidth >= 758){
   const desktopMargin = 100;
