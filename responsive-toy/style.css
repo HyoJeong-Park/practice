@@ -115,6 +115,14 @@ section {
     border-radius: 10px;
   }
 
+  .previewContentPrevButton {
+    display: none;
+  }
+
+  .previewContentNextButton {
+    display: none;
+  }
+
   .previewTitle {
     text-align: center;
     font-size: 50px;
@@ -171,6 +179,17 @@ section {
     width: 350px;
     height: 220px;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 #1F538A;
+  }
+
+  .tryImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tryImageCopyright {
+    display: none;
   }
 }
 
@@ -217,32 +236,64 @@ section {
   }
 
   .preview {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 
   .previewContentActullaySeen {
     overflow: hidden;
+    position: relative;
   }
 
   .previewContentWrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* width: 100%; */
+    transition: transform 0.3s ease;
   }
 
   .previewContent {
-    background-color: #93BCE8;
+    /* background-color: #93BCE8; */
     width: 250px;
-    height: 300px;
+    height: 350px;
     border-radius: 10px;
-    /* margin: 0 auto; */
+    /* box-shadow: inset 0px 0px 5px 0px #93BCE8; */
+    border: 10px solid #93BCE8;
+    border-bottom-width: 50px;
+    padding: 10px;
+  }
+
+  .previewContentPrevButton {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .previewContentNextButton {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
+
+  .previewContentNextButton:hover {
+    cursor: pointer;
+  }
+
+  .previewContentPrevButton > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .previewContentNextButton > svg {
+    width: 30px;
+    height: 30px;
   }
 
   .previewTitle {
     text-align: center;
-    font-size: 25px;
-    padding: 100px 20% 0;
+    font-size: 30px;
+    padding: 100px 15% 0;
   }
 
   .try {
@@ -253,10 +304,6 @@ section {
   }
 
   .trytitleWrapper {
-    /* position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%); */
     text-align: center;
   }
   
@@ -292,10 +339,6 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 200px; */
   }
 
   .tryContent {
@@ -303,5 +346,16 @@ section {
     width: 210px;
     height: 130px;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 #1F538A;
+  }
+
+  .tryImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tryImageCopyright {
+    display: none;
   }
 }
